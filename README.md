@@ -21,6 +21,7 @@ Wireshark” Lab if you’re uncertain about the Wireshark windows).
 <img width="481" alt="Screenshot 2023-10-16 095954" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/2e8ae2a8-8bc2-4d79-a4ec-70fb8c635ea0">
 
 IP address : 192.168.86.68
+
 TCP port number : 55639
 
 ### Soal 2
@@ -31,6 +32,7 @@ and receiving TCP segments for this connection?
 <img width="476" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/9be58b28-b633-4b90-a841-b55ae69cb8db">
 
 IP address : 128.119.245.12 
+
 Port number : 80
 
 ### Soal 3
@@ -48,6 +50,7 @@ receiver, see section 3.4.5 in the text)?
 
 ##### Jawaban
 <img width="482" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/b2c3b257-515e-4431-8f0a-44398884e632">
+
 Raw sequence : 4236649187
 
 ### Soal 4
@@ -61,6 +64,7 @@ determine that value?
 <img width="484" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/26c5e618-211e-4b78-9e0b-3a4b1a16ae64">
 
 Raw sequence : 1068969752
+
 Acknowledgement number (raw) : 4236649188
 
 ### Soal 5
@@ -76,6 +80,7 @@ segment?
 <img width="483" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/92c5e607-160b-48bc-a287-1a4f450a7fd6">
 
 Raw sequence : 4236649188 
+
 TCP payload : 1448
 
 ### Soal 6
@@ -92,7 +97,9 @@ making this calculation after the received of the ACK for the second segment,
 
 ##### Jawaban
 Time of the first segment : 0.024047
-time of the ACK : 0.046552
+
+Time of the ACK : 0.046552
+
 The RTT for the first data-containing segment : 0.022505
 
 ### Soal 7 
@@ -175,7 +182,9 @@ the packet trace.) What are the names of these fields?
 <img width="929" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/dfd3fd9d-2779-4e19-b9d6-cf3cefd1f3f9">
 
 Packet number : 5
+
 Application-layer payload : SSDP
+
 Fields : Source port, destination port, length, and checksum
 
 ### Soal 2
@@ -192,6 +201,7 @@ this answer). Verify your claim with your captured UDP packet.
 
 ##### Jawaban
 <img width="477" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/f01ba2b8-661c-4df5-a57d-c80756aa41be">
+
 The length : The total length (283) of UDP payload (275) and UDP header fields (8)
 
 ### Soal 4
@@ -215,6 +225,7 @@ header fields).
 
 ##### Jawaban
 <img width="325" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/04ed9f63-2ad6-498a-814d-28d1f38fcd51">
+
 The protocol number for UDP : 17
 
 ### Soal 7
@@ -230,5 +241,7 @@ between the port numbers in the two packets.
 <img width="482" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/4ec95a27-94b3-48ef-aa71-fb30a928f569">
 
 The packet number of the first of these two UDP segments : 15
+
 The packet number of the second of these two UDP segments : 17
+
 The relationship between the port numbers : The source port number of packet 15 is the destination port number of packet 17 and vice versa.
