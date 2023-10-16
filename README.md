@@ -89,27 +89,18 @@ the data-transfer part of the TCP connection sent?
  What is the EstimatedRTT value (see Section 3.5.3, in the text) after the
 ACK for the second data-carrying segment is received? Assume that in
 making this calculation after the received of the ACK for the second segment,
-4 Hint: this TCP segment is sent by the client soon (but not always immediately) after the SYNACK
-segment is received from the server. 5 Note that if you filter to only show “http” messages, you’ll see that the TCP segment that Wireshark
-associates with the HTTP POST message is the last TCP segment in the connection (which contains the
-text at the end of alice.txt: “THE END”) and not the first data-carrying segment in the connection.
-Students (and teachers!) often find this unexpected and/or confusing.
-that the initial value of EstimatedRTT is equal to the measured RTT for the
-first segment, and then is computed using the EstimatedRTT equation on
-page 242, and a value of  = 0.125.
-Note: Wireshark has a nice feature that allows you to plot the RTT for
-each of the TCP segments sent. Select a TCP segment in the “listing of
-captured packets” window that is being sent from the client to the
-gaia.cs.umass.edu server. Then select: Statistics->TCP Stream Graph-
->Round Trip Time Graph.
 
 ##### Jawaban
+Time of the first segment : 0.024047
+time of the ACK : 0.046552
+The RTT for the first data-containing segment : 0.022505
 
 ### Soal 7 
 What is the length (header plus payload) of each of the first four data-carrying
 TCP segments?
 
 ##### Jawaban
+the length : 1668
 
 ### Soal 8 
 What is the minimum amount of available buffer space advertised to the client by
@@ -181,6 +172,11 @@ look in the textbook! Answer these questions directly from what you observe in
 the packet trace.) What are the names of these fields?
 
 ##### Jawaban
+<img width="929" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/dfd3fd9d-2779-4e19-b9d6-cf3cefd1f3f9">
+
+Packet number : 5
+Application-layer payload : SSDP
+Fields : Source port, destination port, length, and checksum
 
 ### Soal 2
 By consulting the displayed information in Wireshark’s packet content field for
@@ -188,23 +184,28 @@ this packet (or by consulting the textbook), what is the length (in bytes) of ea
 the UDP header fields?
 
 ##### Jawaban
+The length (in bytes) of each of the UDP header fields : 8 bytes, 2 bytes for each field
 
 ### Soal 3
 The value in the Length field is the length of what? (You can consult the text for
 this answer). Verify your claim with your captured UDP packet. 
 
 ##### Jawaban
+<img width="477" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/f01ba2b8-661c-4df5-a57d-c80756aa41be">
+The length : The total length (283) of UDP payload (275) and UDP header fields (8)
 
 ### Soal 4
 What is the maximum number of bytes that can be included in a UDP payload?
 (Hint: the answer to this question can be determined by your answer to 2. above)
 
 ##### Jawaban
+The maximum payload size : 65,527. 65,535(maximum value for a 16-bit field) − 8(UDP headers) = 65,527 
 
 ### Soal 5
 What is the largest possible source port number? (Hint: see the hint in 4.)
 
 ##### Jawaban
+The largest possible source port number : 65,535
 
 ### Soal 6
 What is the protocol number for UDP? Give your answer in decimal notation. To
@@ -213,6 +214,8 @@ containing this UDP segment (see Figure 4.13 in the text, and the discussion of 
 header fields). 
 
 ##### Jawaban
+<img width="325" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/04ed9f63-2ad6-498a-814d-28d1f38fcd51">
+The protocol number for UDP : 17
 
 ### Soal 7
 Examine the pair of UDP packets in which your host sends the first UDP packet
@@ -224,3 +227,8 @@ second of these two UDP segments in the trace file? Describe the relationship
 between the port numbers in the two packets. 
 
 ##### Jawaban
+<img width="482" alt="image" src="https://github.com/fihrizilhamr/TCP-UDP/assets/116176265/4ec95a27-94b3-48ef-aa71-fb30a928f569">
+
+The packet number of the first of these two UDP segments : 15
+The packet number of the second of these two UDP segments : 17
+The relationship between the port numbers : The source port number of packet 15 is the destination port number of packet 17 and vice versa.
